@@ -7,11 +7,17 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound'; 
 import Signup from './pages/Signup'; 
 
+  /**
+   * App() contains in the following order: 
+   *  [1] navbar
+   *  [2] routes
+   *  [3] footer
+   * styled with tailwind.css
+   */
+
 function App() {
   return  (
-
-  <Router>
-    <header>
+  <Router>  
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
     <Link class="font-semibold text-xl tracking-tight" to="">Pulse</Link>
@@ -31,8 +37,6 @@ function App() {
       </div>
     </div>
     </nav>
-    </header>
-    <main>
     <Routes className="flex-auto">
       <Route path="/" element={<Dashboard />}/>
       <Route path="/forms" element={<Forms />}/>
@@ -40,7 +44,6 @@ function App() {
       <Route path="/signup" element={<Signup />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>
-    </main>
     <footer className="fixed bottom-0 left-0 z-2o p-4 w-full bg-white border-t shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-teal-500">
     <span class="text-sm text-white sm:text-center dark:text-white">© 2022 <Link to="" class="hover:underline">Pulse™</Link>. All Rights Reserved.
     </span>
