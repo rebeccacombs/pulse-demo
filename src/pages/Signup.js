@@ -1,5 +1,4 @@
 import React from 'react'
-import '/Users/faucet/GitHub/pulse/src/index.css'; 
 
 function Signup() { //signup sheet
   return (
