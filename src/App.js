@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Forms from './pages/Forms';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound'; 
+import Signup from './pages/Signup'; 
 
 function App() {
   return  (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/" element={<Dashboard />}/>
       <Route path="/forms" element={<Forms />}/>
       <Route path="/profile" element={<Profile />}/>
+      <Route path="/signup" element={<Signup />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>
     </main>
