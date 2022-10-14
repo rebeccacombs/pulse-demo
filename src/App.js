@@ -21,7 +21,7 @@ function App() {
   <Router>  
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src={mainIcon} alt="mainIcon"/>
+      <Link to=""><img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src={mainIcon} alt="mainIcon"/></Link>
     <Link class="font-semibold text-xl tracking-tight" to="">Pulse</Link>
     </div>
     <div class="block sm:hidden">
