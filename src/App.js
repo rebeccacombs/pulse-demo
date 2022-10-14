@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import mainIcon from './pages/mainIcon3.png'; 
 import Dashboard from './pages/Dashboard';
 import Forms from './pages/Forms';
 import Profile from './pages/Profile';
@@ -14,12 +15,13 @@ import Signup from './pages/Signup';
    *  [3] footer
    * styled with tailwind.css
    */
-
+console.log(mainIcon);
 function App() {
   return  (
   <Router>  
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src={mainIcon} alt="mainIcon"/>
     <Link class="font-semibold text-xl tracking-tight" to="">Pulse</Link>
     </div>
     <div class="block sm:hidden">

@@ -1,7 +1,7 @@
 import React from 'react'
 import '/Users/faucet/GitHub/pulse/src/index.css'; 
 
-function Signup() {
+function Signup() { //signup sheet
   return (
     <div class="flex mt-24 justify-center h-screen">
     <div class="w-full max-w-xs">
@@ -23,7 +23,7 @@ function Signup() {
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
         Sign In
       </button>
-      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/">
         Forgot Password?
       </a>
     </div>
