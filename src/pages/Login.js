@@ -2,11 +2,10 @@ import React, { useRef, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from "react-router-dom"
 
-function Signup() { //signup sheet
+function Login() { //signup sheet
   const emailRef = useRef()
   const passwordRef = useRef()
-  const confirmPasswordRef = useRef() 
-  const { signup } = useAuth()
+  const { login } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
@@ -14,17 +13,13 @@ function Signup() { //signup sheet
   async function handleSubmit(e){
     e.preventDefault()
 
-    if (passwordRef.current.value !== confirmPasswordRef.current.value){
-      return setError('Passwords do not match.')
-    }
-
     try{
       setError('')
       setLoading(true)
-       await signup(emailRef.current.value, passwordRef.current.value)
+       await login(emailRef.current.value, passwordRef.current.value)
        navigate("/profile")
     } catch {
-      setError("Failed to create an account.")
+      setError("Failed to log in.")
     
     setLoading(false)
     
@@ -36,7 +31,7 @@ function Signup() { //signup sheet
     <div class="w-full max-w-xs">
   <form onSubmit={handleSubmit} class="bg-white shadow-2xl rounded px-8 pt-6 påb-4 mb-4">
   <div class=" text-center block text-gray-700 text-xl font-bold mb-2">
-    Sign Up</div>
+    Log In</div>
     {error && <p class="text-red-500 text-xs italic">{error}</p>}
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -50,20 +45,14 @@ function Signup() { //signup sheet
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" ref={passwordRef} required/>
     </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">
-        Confirm Password
-      </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="******************" ref={confirmPasswordRef} required/>
-    </div>
-      <button disabled={loading} class="block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-        Sign Up
+      <button disabled={loading} class="mt-4 block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Log In
       </button>
-    <div class="text-center text-gray-700 text-xs mt-4 pb-3">Already have an account? <Link to="/login" class="text-blue-600">Log in.</Link></div>
+    <div class="text-center text-gray-700 text-xs mt-4 pb-3">Need an account? <Link to="/signup" class="text-blue-600">Sign up.</Link></div>
   </form>
 </div>
 </div>
   )
 }
 
-export default Signup
+export default Login
