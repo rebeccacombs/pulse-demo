@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Signup from './pages/Signup'; 
 import { AuthProvider } from './contexts/AuthContext'
 import Login from './pages/Login';
+import PrivateRoute from "./pages/PrivateRoute"
 
   /**
    * App() contains in the following order: 
@@ -45,7 +46,9 @@ function App() {
     <Routes className="flex-auto">
       <Route path="/" element={<Dashboard />}/>
       <Route path="/forms" element={<Forms />}/>
+      <Route element={<PrivateRoute />}>
       <Route path="/profile" element={<Profile />}/>
+      </Route>
       <Route path="/signup" element={<Signup />}/>
       <Route path="/login" element={<Login />}/>
       <Route path="*" element={<NotFound />}/>
