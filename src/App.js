@@ -7,8 +7,9 @@ import Forms from './pages/Forms';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound'; 
 import Signup from './pages/Signup'; 
-import { AuthProvider } from './contexts/AuthContext'
+import { AuthProvider } from './contexts/AuthContext'; 
 import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
 import PrivateRoute from "./pages/PrivateRoute"
 
   /**
@@ -51,6 +52,7 @@ function App() {
       </Route>
       <Route path="/signup" element={<Signup />}/>
       <Route path="/login" element={<Login />}/>
+      <Route path="/forgot-password" element={<ForgotPassword />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>
     <footer className="fixed bottom-0 left-0 z-2o p-4 w-full bg-white border-t shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-teal-500">

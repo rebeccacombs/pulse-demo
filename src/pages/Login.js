@@ -48,7 +48,8 @@ function Login() { //signup sheet
       <button disabled={loading} class="mt-4 block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
         Log In
       </button>
-    <div class="text-center text-gray-700 text-xs mt-4 pb-3">Need an account? <Link to="/signup" class="text-blue-600">Sign up.</Link></div>
+      <div class="text-center text-gray-700 text-xs mt-4 hover:underline"><Link to="/forgot-password" class="text-blue-600">Forgot Password?</Link></div>
+    <div class="text-center text-gray-700 text-xs mt-1 pb-3">Need an account? <Link to="/signup" class="text-blue-600 hover:underline">Sign up.</Link></div>
   </form>
 </div>
 </div>
