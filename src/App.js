@@ -60,7 +60,7 @@ function App() {
       <Route path="*" element={<NotFound />}/>
     </Routes>
     <footer className="fixed bottom-0 left-0 z-2o p-4 w-full bg-white border-t shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-teal-500">
-    <span class="text-sm text-white sm:text-center dark:text-white">© 2022 <Link to="" class="hover:underline">Pulse™</Link>. All Rights Reserved.
+    <span class="text-lg text-white sm:text-center dark:text-white">© 2022 <Link to="" class="hover:underline">Pulse™</Link>. All Rights Reserved.
     </span>
       </footer>
   </Router>

@@ -45,7 +45,7 @@ function About() {
                 </ul>
             </div> 
 
-            <div class="box px-6 py-4 bg-white max-w-sm mb-8 mr-8 rounded-lg">
+            <div class="box px-6 py-4 bg-white max-w-sm mb-8 rounded-lg">
             <div class="text-center font-bold text-xl mb-1">Website Development</div>
             <div class="text-center italic mb-2">10/2022-current</div>
             <ul class="text-gray-700 mb-2 list-inside">
@@ -54,7 +54,7 @@ function About() {
                 </ul>
             </div>
 
-            <div class="box px-6 py-4 bg-white max-w-sm mb-8 mr-8 rounded-lg">
+            <div class="box px-6 py-4 bg-white max-w-sm mb-8 rounded-lg">
             <div class="text-center font-bold text-xl mb-1">App Development</div>
             <div class="text-center italic mb-2">01/2023-02/2023</div>
             <ul class="text-gray-700 mb-2 list-inside">
@@ -63,7 +63,7 @@ function About() {
                 </ul>
             </div>
 
-            <div class="box px-6 py-4 bg-white max-w-sm mb-8 mr-8 rounded-lg">
+            <div class="box px-6 py-4 bg-white max-w-sm mb-8 rounded-lg">
             <div class="text-center font-bold text-xl mb-1">Data Analysis and Visualization</div>
             <div class="text-center italic mb-2">04/23-01/2024</div>
             <ul class="text-gray-700 list-inside">
