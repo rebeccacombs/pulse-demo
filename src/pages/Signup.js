@@ -39,22 +39,22 @@ function Signup() { //signup sheet
     Sign Up</div>
     {error && <p class="text-red-500 text-xs italic">{error}</p>}
     <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+      <label class="block text-left text-gray-700 text-sm font-bold mb-2" for="email">
         Email
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email" ref={emailRef} required/>
+      <input class="text-left shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Email" ref={emailRef} required/>
     </div>
     <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+      <label class="block text-left text-gray-700 text-sm font-bold mb-2" for="password">
         Password
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" ref={passwordRef} required/>
+      <input class="text-left shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" ref={passwordRef} required/>
     </div>
     <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">
+      <label class="block text-left text-gray-700 text-sm font-bold mb-2" for="confirm-password">
         Confirm Password
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="******************" ref={confirmPasswordRef} required/>
+      <input class="text-left shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="******************" ref={confirmPasswordRef} required/>
     </div>
       <button disabled={loading} class="block mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
         Sign Up
