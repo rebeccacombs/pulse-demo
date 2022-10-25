@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import PrivateRoute from "./pages/PrivateRoute"
 import About from "./pages/About"
+import Done from "./pages/Done"
 //import "./pages/pulsehomepage/aboutstyle.css"
 
   /**
@@ -49,7 +50,10 @@ function App() {
     </nav>
     <Routes className="flex-auto">
       <Route path="/" element={<About />}/>
+      <Route element={<PrivateRoute />}>
       <Route path="/forms" element={<Forms />}/>
+      </Route>
+      <Route path="/done" element={<Done />}/>
       <Route path="/dashboard" element={<Dashboard />}/>
       <Route element={<PrivateRoute />}>
       <Route path="/profile" element={<Profile />}/>
