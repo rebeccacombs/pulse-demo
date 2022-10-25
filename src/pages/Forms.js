@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { db } from "../firebase"
-import { collection, setDoc, doc, getDoc, DocumentSnapshot } from "firebase/firestore";
+import { setDoc, doc, getDoc } from "firebase/firestore";
 import { useAuth } from '../contexts/AuthContext'
 
 function Forms() {
@@ -14,14 +14,16 @@ function Forms() {
   const navigate = useNavigate()
   let sleepDataRef = null
 
-  if(currentUser){
-    sleepDataRef = doc(db, "sleepData", currentUser.email)
+  if(currentUser){ 
+    sleepDataRef = doc(db, "sleepData", currentUser.uid)
+    //getting the user's unique id, it is encrypted!
   }
 
   async function handleSubmit(e){
     e.preventDefault(); 
 
     const docSnap = await getDoc(sleepDataRef)
+
     if(docSnap.exists()){
       return setError("Cannot submit form again.")
     }
