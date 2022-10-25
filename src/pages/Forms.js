@@ -14,7 +14,7 @@ function Forms() {
   const navigate = useNavigate()
   let sleepDataRef = null
 
-  if(currentUser){ 
+  if(currentUser){ //to check if user is signed in, assists privateRoute
     sleepDataRef = doc(db, "sleepData", currentUser.uid)
     //getting the user's unique id, it is encrypted!
   }
@@ -22,9 +22,9 @@ function Forms() {
   async function handleSubmit(e){
     e.preventDefault(); 
 
-    const docSnap = await getDoc(sleepDataRef)
+    const docSnap = await getDoc(sleepDataRef) //creates new doc
 
-    if(docSnap.exists()){
+    if(docSnap.exists()){ //wont create a new doc if it exists 
       return setError("Cannot submit form again.")
     }
 
@@ -44,9 +44,7 @@ function Forms() {
       })
     } catch {
       setError("Failed to submit.")
-    
     setLoading(false)
-    
   }
   }
 
