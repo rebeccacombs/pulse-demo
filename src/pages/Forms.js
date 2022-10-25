@@ -12,9 +12,11 @@ function Forms() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  let sleepDataRef = null
 
-  const sleepDataRef = doc(db, "sleepData", currentUser.email)
-
+  if(currentUser){
+    sleepDataRef = doc(db, "sleepData", currentUser.email)
+  }
 
   async function handleSubmit(e){
     e.preventDefault(); 
