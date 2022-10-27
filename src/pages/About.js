@@ -19,7 +19,7 @@ function About() {
     <div class="flex justify-center mx-auto px-6 p-10 bg-teal-500 rounded">
         <div class="grid grid-rows-3 grid-flow-col">
         <div class="box px-6 py-4 bg-white max-w-sm mb-8 mr-8 rounded-lg">
-            <div class="text-center font-bold text-xl mb-1">Pilot Research</div>
+            <div class="text-center font-bold text-xl mb-1">Literature Review</div>
             <div class="text-center italic mb-2">10/2022</div>
             <ul class="text-gray-700 mb-2 list-inside">
             <li>- Look into the effects of habits(ie sleep) on performance </li>
