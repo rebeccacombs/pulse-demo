@@ -38,7 +38,7 @@ function About() {
             
             <div class="box px-6 py-4 bg-white max-w-sm mb-8 mr-8 rounded-lg">
             <div class="text-center font-bold text-xl mb-1">Conducting Experiments</div>
-            <div class="text-center italic mb-2">04/2024-06/2024</div>
+            <div class="text-center italic mb-2">01/2023-06/2024</div>
             <ul class="text-gray-700 mb-2 list-inside">
             <li>- Run experiments for weeks-months</li>
                     <li>- Collect data in our application</li>
